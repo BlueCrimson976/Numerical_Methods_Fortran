@@ -15,13 +15,15 @@ program Trapezoid
 
 end program Trapezoid
 !________________________________________________________
+
+!Curve Equation
 real function curve(x)
       implicit none
       real :: x
       curve = 1/x
 end function curve
 
-
+!To find the area of ONE Trapezoid
 subroutine area_1_trap(u_b , l_b , p1 , p2 , dx , trap)
         real :: u_b , l_b ,  p1 , p2 , trap
         integer , parameter :: n = 1000
@@ -32,6 +34,8 @@ subroutine area_1_trap(u_b , l_b , p1 , p2 , dx , trap)
         trap = (dx/2.0)*(y1 + y2)
 end subroutine area_1_trap
 
+
+!To Sum up areas of different trapezoids and get total area.
 subroutine Summation(u_b , l_b , area)
         integer , parameter :: n = 1000
         real :: trap ,dx , p1 , p2
@@ -47,7 +51,7 @@ subroutine Summation(u_b , l_b , area)
 end subroutine Summation		
             
             
-! Working!!!! 		
+ 		
 
         
     
